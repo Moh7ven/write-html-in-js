@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.body.style.backgroundColor = "#333333";
+      let container = document.createElement("div");
+      let noir1 = document.createElement("div");
+      let noir2 = document.createElement("div");
+      let js = document.createElement("p");
+
+      console.log(container);
+
+      container.style.width = "40rem";
+      container.style.height = "40rem";
+      container.style.backgroundColor = "#FFFF01";
+      container.style.margin = "0 auto";
+      container.style.position = "relative";
+
+      //Ajout noir1
+      noir1.style.position = "absolute";
+      noir1.style.width = "100%";
+      noir1.style.height = "39rem";
+      noir1.style.backgroundColor = "black";
+      noir1.style.top = "0";
+      noir1.style.clipPath = "polygon(1% 0, 100% 0%, 100% 44%, 38% 44%)";
+      console.log(noir1);
+
+      //Ajout noir2
+      noir2.style.position = "absolute";
+      noir2.style.width = "30rem";
+      noir2.style.height = "100%";
+      noir2.style.backgroundColor = "black";
+      noir2.style.left = "0";
+      noir2.style.clipPath = "polygon(0 0, 50% 44%, 49% 160%, 0 100%)";
+      console.log(noir1);
+
+      //Ajout du texte js
+      js.textContent = "JS";
+      js.style.fontWeight = "bold";
+      js.style.position = "absolute";
+      js.style.fontSize = "12rem";
+      js.style.marginTop = "410px";
+      js.style.right = "30px";
+
+      //Ajout dans le DOM
+      document.body.appendChild(container);
+      container.appendChild(js);
+      container.appendChild(noir1);
+      container.appendChild(noir2);
+    </script>
+  </body>
+</html>
